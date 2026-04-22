@@ -3,10 +3,10 @@
 ## 🚨 **PROBLEMA RESOLVIDO:**
 
 **Erro:** `npm error ERESOLVE unable to resolve dependency tree`
-**Causa:** Conflito entre `@typechain/ethers-v6@^0.4.0` e `@nomicfoundation/hardhat-toolbox@^4.0.0`
+**Causa:** Conflito entre `@typechain/ethers-v6@0.5.1` e `@nomicfoundation/hardhat-toolbox@3.0.0`
 
 **Solução:** Atualizado para versões compatíveis:
-- `@typechain/ethers-v6`: `^0.5.1` (para casar com `@nomicfoundation/hardhat-toolbox@^4.0.0`)
+- `@typechain/ethers-v6`: `^0.4.0` (em vez de `^0.5.0`)
 - `@nomicfoundation/hardhat-toolbox`: `^4.0.0` (em vez de `^3.0.0`)
 - `hardhat`: `^2.22.0` (em vez de `^2.19.0`)
 
@@ -78,7 +78,7 @@ Edite `package.json` para usar versões exatas:
 - Node.js: 18.x, 20.x
 - npm: 9.x, 10.x
 - hardhat-toolbox: 4.0.0
-- typechain/ethers-v6: 0.5.1
+- typechain/ethers-v6: 0.4.0
 - hardhat: 2.22.0
 
 ### **NÃO funciona:**
@@ -100,7 +100,7 @@ npm list @typechain/ethers-v6
 ### **Saída esperada:**
 ```
 @nomicfoundation/hardhat-toolbox@4.0.0
-@typechain/ethers-v6@0.5.1
+@typechain/ethers-v6@0.4.0
 hardhat@2.22.0
 ```
 

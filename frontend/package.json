@@ -27,7 +27,6 @@
     "@react-navigation/native": "^6.1.0",
     "@react-navigation/stack": "^6.3.0",
     "@react-navigation/bottom-tabs": "^6.5.0",
-    "@walletconnect/modal-react-native": "^2.0.0",
     "@walletconnect/web3wallet": "^1.0.0",
     "ethers": "^6.0.0",
     "viem": "^1.0.0",
