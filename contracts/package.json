@@ -1,0 +1,56 @@
+{
+  "name": "sovereign-wallet-contracts",
+  "version": "0.1.0",
+  "description": "Smart contracts for Sovereign Wallet - 100% decentralized wallet with ERC-4337",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "lint": "solhint 'src/**/*.sol'",
+    "lint:fix": "solhint 'src/**/*.sol' --fix",
+    "format": "prettier --write 'src/**/*.sol' 'test/**/*.ts' 'scripts/**/*.ts'",
+    "clean": "hardhat clean",
+    "deploy:goerli": "hardhat run scripts/deploy.ts --network goerli",
+    "deploy:mumbai": "hardhat run scripts/deploy.ts --network mumbai",
+    "deploy:sepolia": "hardhat run scripts/deploy.ts --network sepolia",
+    "verify": "hardhat verify --network",
+    "typechain": "hardhat typechain",
+    "gas": "hardhat test --gas-report"
+  },
+  "keywords": [
+    "ethereum",
+    "smart-contracts",
+    "erc4337",
+    "account-abstraction",
+    "wallet",
+    "defi"
+  ],
+  "author": "Sovereign Wallet Team <hello@sovereignwallet.xyz>",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.0",
+    "dotenv": "^16.0.0",
+    "ethers": "^6.0.0",
+    "hardhat": "^2.19.0",
+    "hardhat-gas-reporter": "^1.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-solidity": "^1.0.0",
+    "solhint": "^4.0.0",
+    "solidity-coverage": "^0.8.0",
+    "ts-node": "^10.0.0",
+    "typechain": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@account-abstraction/contracts": "^0.6.0",
+    "@openzeppelin/contracts": "^5.0.0"
+  }
+}

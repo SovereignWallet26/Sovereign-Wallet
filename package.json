@@ -1,0 +1,65 @@
+{
+  "name": "sovereign-wallet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A 100% decentralized smart contract wallet with ERC-4337 and social recovery",
+  "keywords": [
+    "ethereum",
+    "web3",
+    "wallet",
+    "defi",
+    "erc4337",
+    "account-abstraction",
+    "crypto"
+  ],
+  "homepage": "https://github.com/SovereignWallet26/Sovereign-Wallet#readme",
+  "bugs": {
+    "url": "https://github.com/SovereignWallet26/Sovereign-Wallet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SovereignWallet26/Sovereign-Wallet.git"
+  },
+  "license": "MIT",
+  "author": "Sovereign Wallet Team <hello@sovereignwallet.xyz>",
+  "workspaces": [
+    "contracts",
+    "frontend"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "test": "npm run test --workspace=contracts",
+    "test:frontend": "npm run test --workspace=frontend",
+    "build": "npm run build --workspace=contracts",
+    "build:frontend": "npm run build --workspace=frontend",
+    "dev": "concurrently \"npm run dev --workspace=contracts\" \"npm run start --workspace=frontend\"",
+    "lint": "npm run lint --workspaces",
+    "lint:fix": "npm run lint:fix --workspaces",
+    "format": "npm run format --workspaces",
+    "coverage": "npm run coverage --workspace=contracts",
+    "deploy:goerli": "npm run deploy:goerli --workspace=contracts",
+    "deploy:mumbai": "npm run deploy:mumbai --workspace=contracts",
+    "verify": "npm run verify --workspace=contracts"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ],
+    "*.sol": [
+      "forge fmt"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
